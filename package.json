@@ -8,7 +8,7 @@
     "test": "karma start karma.config.js",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install"
-  },
+  }, 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BillBensing/Angular2-Webpack-Starter.git"

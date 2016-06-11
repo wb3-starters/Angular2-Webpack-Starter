@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 import { LandingComponent } from '../../component';
 
 @Component({
   selector: 'my-app',
   template: require('./app.component.html'),
   styleUrls: [require('./app.component.css')],
-  directives: [ LandingComponent ]
+  directives: [ROUTER_DIRECTIVES]
 })
+@RouteConfig([
+  {path: '/', name: 'Landing', component: LandingComponent, useAsDefault: true}
+])
 export class AppComponent {
   constructor(){}
  }
