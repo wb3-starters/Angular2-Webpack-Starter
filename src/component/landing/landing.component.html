@@ -1,18 +1,26 @@
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  
+
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
 
       <!-- Title -->
-      <span class="mdl-layout-title">Angular2Webpack Starter Project</span>
+      <span class="mdl-layout-title"><a class="mdl-navigation__link" [routerLink]="['Landing']">Angular2Webpack Starter Project</a></span>
 
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
 
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" [routerLink]="['Landing']">Home</a>
+
+        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">more_vert</i>
+        </button>
+
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+          <li class="mdl-menu__item"><a [routerLink]="['NewAccount']">Register</a></li>    
+        </ul>
+        
       </nav>
     </div>
   </header>
@@ -27,14 +35,7 @@
 
   <main class="mdl-layout__content">
     <div class="page-content">
-      <div class="mdl-grid">
-        <div class="mdl-layout-spacer"></div>
-        <div class="mdl-cell mdl-cell--4-col">
-          <h1>Welcome!</h1>
-          <p>This is the Angluar2Webpack Starter Project. Learn more about <a href="http://www.billbensing.com" target="_blank">Bill Bensing</a></p>
-        </div>
-        <div class="mdl-layout-spacer"></div>
-      </div>
+      <router-outlet></router-outlet>
     </div>
   </main>
 

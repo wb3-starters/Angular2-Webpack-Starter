@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
-import { LandingComponent } from '../../component';
+import { LandingComponent, NewAccountComponent } from '../../component';
 
 @Component({
   selector: 'my-app',
@@ -9,7 +9,7 @@ import { LandingComponent } from '../../component';
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  {path: '/', name: 'Landing', component: LandingComponent, useAsDefault: true}
+  {path: '/...', name: 'Landing', component: LandingComponent, useAsDefault: true}
 ])
 export class AppComponent {
   constructor(){}

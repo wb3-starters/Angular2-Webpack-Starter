@@ -1,0 +1,52 @@
+<div class="mdl-grid">
+
+    <div class="mdl-layout-spacer"></div>
+
+    <!-- New Account Card -->
+    <div class="mdl-card mdl-cell--4-col mdl-cell--5-col-tablet mdl-shadow--2dp">
+
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">{{title}}</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            Here is the most basic info to get started. We will email with a link to enter your password.
+        </div>
+        <!-- New Account Form -->
+        <div class="mdl-card__supporting-text">
+
+            <form action="#">
+
+                <!-- First Name -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="firstName" [(ngModel)]="user.firstName">
+                    <label class="mdl-textfield__label" for="firstName">First Name...</label>
+                    <span class="mdl-textfield__error">Only letters and no spaces, please!</span>
+                </div>
+
+                <!-- Last Name -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="lastName" [(ngModel)]="user.lastName">
+                    <label class="mdl-textfield__label" for="lastName">Last Name...</label>
+                    <span class="mdl-textfield__error">Only letters and no spaces, please!</span>
+                </div>
+
+                <!-- Email -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" id="email" [(ngModel)]="user.email">
+                    <label class="mdl-textfield__label" for="email">Email Address</label>
+                    <span class="mdl-textfield__error">Something is fishy with your email, remember no spaces :)</span>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="mdl-card__actions mdl-card--border">
+            <button (click)="CreateAccount(user)" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Create Account</button>
+        </div>
+
+    </div>
+
+    <div class="mdl-layout-spacer"></div>
+
+</div>
