@@ -1,8 +1,5 @@
 # Angular2-Webpack-Starter
-Kicking off a project and getting straight into code is awesome.  I complied this starter project to help you go straight into coding what users want.  You can clone this repo or get it from npm
-```
-npm i angular2webpack-starter
-```
+Kicking off a project and getting straight into code is awesome.  I complied this starter project to help you go straight into coding what users want.  
 
 I envision the starter-project being used as a basis for your personal apps, your company apps, or a starting place for your hackathon team!
 
