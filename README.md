@@ -9,7 +9,7 @@ The goal of this project is to:
 2. Establish an easily understandable & standard reference architecture
 
 I was inspired by the Angular.io write-up for [Angular2 for TypeScript | Webpack: an introduction
-](https://angular.io/docs/ts/latest/guide/webpack.html) and some good talks by [John Papa](https://github.com/johnpapa).  This app code is 99% from the Angular.io write-up and the reference architecture is based on thoughts by John Papa.
+](https://angular.io/docs/ts/latest/guide/webpack.html) and some good talks by [John Papa](https://github.com/johnpapa).  This app code is 99% from the Angular.io write-up and the reference architecture is based on my experiences, influenced by thoughts by John Papa.
 
 ## Getting started
 ### Prerequisites 
