@@ -5,8 +5,6 @@ import { AppComponent } from './core';
 
 /* Import css, ect... */
 
-import './core/style/styles.css';
-
 if (process.env.ENV === 'production') {
   enableProdMode();
 }

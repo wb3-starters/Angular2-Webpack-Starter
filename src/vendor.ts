@@ -8,6 +8,9 @@ import '@angular/router-deprecated';
 
 // RxJS
 import 'rxjs';
+import 'webpack-material-design-icons';
+import '../node_modules/material-design-lite/material.css';
+import '../node_modules/material-design-lite/material.js';
 
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
