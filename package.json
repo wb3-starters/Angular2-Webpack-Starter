@@ -1,6 +1,6 @@
 {
   "name": "angular2webpack-starter",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple angular project which will allow you to start bulding angluar2 applications quickly.",
   "main": "app.js",
   "scripts": {
@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/BillBensing/Angular2-Webpack-Starter#readme",
   "dependencies": {
+  },
+  "devDependencies": {
     "@angular/common": "2.0.0-rc.1",
     "@angular/compiler": "2.0.0-rc.1",
     "@angular/core": "2.0.0-rc.1",
@@ -36,9 +38,7 @@
     "core-js": "^2.4.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.6",
-    "zone.js": "0.6.12"
-  },
-  "devDependencies": {
+    "zone.js": "0.6.12",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
