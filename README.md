@@ -1,5 +1,8 @@
 # Angular2-Webpack-Starter
-Kicking off a project and getting straight into code is awesome.  I complied this starter project to help you go straight into coding what users want.
+Kicking off a project and getting straight into code is awesome.  I complied this starter project to help you go straight into coding what users want.  You can clone this repo or get it from npm
+```
+npm i angular2webpack-starter
+```
 
 I envision the starter-project being used as a basis for your personal apps, your company apps, or a starting place for your hackathon team!
 
@@ -17,11 +20,11 @@ This starter package requires global components.  Listed below are the component
 
 #### [Webpack](http://webpack.github.io/docs/)
 ```
-npm install webpack -g
+npm i webpack -g
 ```
 #### [TypeScript](https://www.typescriptlang.org/)
 ```
-npm install typescript -g
+npm i typescript -g
 ```
 
 ### Making the Repo work
