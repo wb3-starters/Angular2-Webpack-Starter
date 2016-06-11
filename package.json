@@ -1,0 +1,25 @@
+{
+  "name": "angular2-webpack-starter",
+  "version": "1.0.0",
+  "description": "A simple angular project which will allow you to start bulding angluar2 applications quickly.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillBensing/Angular2-Webpack-Starter.git"
+  },
+  "keywords": [
+    "angular2",
+    "angular",
+    "webpack",
+    "starter"
+  ],
+  "author": "Bill Bensing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BillBensing/Angular2-Webpack-Starter/issues"
+  },
+  "homepage": "https://github.com/BillBensing/Angular2-Webpack-Starter#readme"
+}
