@@ -1,6 +1,15 @@
 # Angular2-Webpack-Starter
+Kicking off a project and getting straight into code is awesome.  I complied this starter project to help you go straight into coding what users want.
 
-This starter project is based on the Angular.io write-up for [Angular2 & Webpack](https://angular.io/docs/ts/latest/guide/webpack.html).
+I envision the starter-project being used as a basis for your personal apps, your company apps, or a starting place for your hackathon team!
+
+The goal of this project is to:
+
+1. Greatly reduce pre-project configuration
+2. Establish an easily understandable & standard reference architecture
+
+I was inspired by the Angular.io write-up for [Angular2 for TypeScript | Webpack: an introduction
+](https://angular.io/docs/ts/latest/guide/webpack.html) and some good talks by [John Papa](https://github.com/johnpapa).  This app code is 99% from the Angular.io write-up and the reference architecture is based on thoughts by John Papa.
 
 ## Getting started
 ### Prerequisites 
