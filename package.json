@@ -1,6 +1,6 @@
 {
   "name": "angular2webpack-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple angular project which will allow you to start bulding angluar2 applications quickly.",
   "main": "app.js",
   "scripts": {
