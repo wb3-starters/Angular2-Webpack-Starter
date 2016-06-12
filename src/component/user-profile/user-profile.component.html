@@ -1,0 +1,158 @@
+<div class="mdl-grid">
+
+    <div class="mdl-cell--hide-phone mdl-layout-spacer"></div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--5-col-tablet">
+        <div class="mdl-cell mdl-cell--12-col">
+            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+
+                    <div class="mdl-tabs__tab-bar">
+                        <!-- Tab: Basics -->
+                        <a href="#basics-panel" class="mdl-tabs__tab is-active">
+                            <i *ngIf="userProfileForm.controls.email.valid && userProfileForm.controls.firstName.valid && userProfileForm.controls.lastName.valid"
+                                class="material-icons">done</i>
+                            <i *ngIf="!userProfileForm.controls.email.valid || !userProfileForm.controls.firstName.valid || !userProfileForm.controls.lastName.valid"
+                                class="material-icons">info</i> Basics
+                        </a>
+                        
+                        <!-- Tab: Address -->
+                        <a href="#address-panel" class="mdl-tabs__tab">
+                            <i *ngIf="userProfileForm.controls.addressLine1.valid &&  userProfileForm.controls.zipcode.valid" class="material-icons">done</i>
+                            <i *ngIf="!userProfileForm.controls.addressLine1.valid || !userProfileForm.controls.zipcode.valid" class="material-icons">info</i>                            Address
+                        </a>
+                        
+                        <!-- Tab: About you -->
+                        <a href="#about-panel" class="mdl-tabs__tab">About You</a>
+
+                    </div>
+
+                    <form [ngFormModel]="userProfileForm">
+                        <div class="mdl-tabs__panel is-active" id="basics-panel">
+
+                            <div class="mdl-card__supporting-text">
+                                Update your information here
+                            </div>
+
+                            <div class="mdl-card__supporting-text">
+
+                                <!-- First Name -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <label class="mdl-textfield__label" for="txtFirstName">First Name...</label>
+                                    <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="txtFirstName" ngControl="firstName" />
+                                    <div *ngIf="userProfileForm.controls.firstName.dirty && !userProfileForm.controls.firstName.valid">
+                                        <span class="mdl-textfield__error">Only letters and no spaces, please!</span>
+                                    </div>
+                                </div>
+
+                                <!-- Last Name -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <label class="mdl-textfield__label" for="txtlastName">Last Name...</label>
+                                    <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="txtlastName" ngControl="lastName" />
+                                    <div *ngIf="userProfileForm.controls.lastName.dirty && !userProfileForm.controls.lastName.valid">
+                                        <span class="mdl-textfield__error">Only letters and no spaces, please!</span>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <label class="mdl-textfield__label" for="txtEmail">Email Address</label>
+                                    <input class="mdl-textfield__input" type="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" id="txtEmail" ngControl="email"
+                                    />
+                                    <div *ngIf="userProfileForm.controls.email.dirty && !userProfileForm.controls.email.valid">
+                                        <span class="mdl-textfield__error">Something is fishy with your email, remember no spaces :)</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- address panel -->
+                        <div class="mdl-tabs__panel" id="address-panel">
+
+                            <div class="mdl-card__supporting-text">
+                                This is where we send cool prizes.
+                            </div>
+
+                            <div class="mdl-card__supporting-text">
+
+                                <!-- Address Line 1 -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <label class="mdl-textfield__label" for="txtaddressLine1">Address...</label>
+                                    <input class="mdl-textfield__input" type="text" pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$" id="txtaddressLine1"
+                                        ngControl="addressLine1" />
+                                    <div *ngIf="userProfileForm.controls.addressLine1.dirty && !userProfileForm.controls.addressLine1.valid">
+                                        <span class="mdl-textfield__error">Numbers and letters only, thanks!</span>
+                                    </div>
+                                </div>
+
+                                <!-- Address Line 2-->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <label class="mdl-textfield__label" for="txtaddressLine2">Address continued...</label>
+                                    <input class="mdl-textfield__input" type="text" pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$" id="txtaddressLine2"
+                                        ngControl="addressLine2" />
+                                    <div *ngIf="userProfileForm.controls.addressLine2.dirty && !userProfileForm.controls.addressLine2.valid">
+                                        <span class="mdl-textfield__error">Numbers and letters only, thanks!</span>
+                                    </div>
+                                </div>
+
+                                <!-- Zicode -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <label class="mdl-textfield__label" for="txtzipcode">Zipcode...</label>
+                                    <input class="mdl-textfield__input" type="zipcode" pattern="[0-9]{5}" id="txtzipcode" ngControl="zipcode" maxlength="5" />
+                                    <div *ngIf="userProfileForm.controls.zipcode.dirty && !userProfileForm.controls.zipcode.valid">
+                                        <span class="mdl-textfield__error">We don't recognize that zipcode.</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- about panel -->
+                        <div class="mdl-tabs__panel" id="about-panel">
+
+                            <div class="mdl-card__supporting-text">
+                                This is how people get to know you.
+                            </div>
+
+                            <div class="mdl-card__supporting-text">
+                                <!-- Description -->
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <label class="mdl-textfield__label" for="txtDescription">Tell people about you!</label>
+                                    <textarea class="mdl-textfield__input md-cell--12-col" type="text" rows="10" id="txtDescription"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="userProfileForm.valid" class="mdl-cell mdl-cell--12-col">
+            <div class="mdl-card mdl-cell--12-col mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text"></h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <br />
+                    <p>You are: {{userProfileForm.value.firstName}} {{userProfileForm.value.lastName}} and we keep you in the
+                        loop at {{userProfileForm.value.email}}</p>
+                    <p>We can send you free stuff at: <br /> {{userProfileForm.value.addressLine1}} {{userProfileForm.value.addressLine2}},
+                        {{userProfileForm.value.zipcode}}
+                    </p>
+                </div>
+                <div class="mdl-card__menu">
+                    <button class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect">Continue</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mdl-cell--hide-phone    mdl-layout-spacer"></div>
+
+</div>

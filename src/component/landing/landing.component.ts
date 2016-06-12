@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
-import { NewAccountComponent } from '../new-account';
-import { NewAccountConfirmationComponent } from '../new-account/confirmation';
-import { LandingContentComponent,  } from './content';
+import { NewAccountComponent, NewAccountConfirmationComponent } from '../new-account';
+import { UserProfileComponent } from '../user-profile';
+import { LandingContentComponent,   } from './content';
 
 @Component({
   selector: 'landing',
@@ -13,7 +13,8 @@ import { LandingContentComponent,  } from './content';
 @RouteConfig([
   {path: '/', name: 'LandingContent', component: LandingContentComponent, useAsDefault: true },
   {path: '/new-account', name: 'NewAccount', component: NewAccountComponent },
-  {path: '/new-account/confirmation', name: 'NewAccountConfirmation', component: NewAccountConfirmationComponent}
+  {path: '/new-account/confirmation', name: 'NewAccountConfirmation', component: NewAccountConfirmationComponent},
+  {path: '/user-profile', name: 'UserProfile', component: UserProfileComponent}
 ])
 
 export class LandingComponent { 
